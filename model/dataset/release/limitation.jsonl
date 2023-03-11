@@ -1,0 +1,90 @@
+[
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 26461",
+        "completion": "Session host IP virtualization feature does not work in cloud deployments (Azure/AWS/Oracle)."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 25474",
+        "completion": "Shadow sessions are considered as direct RDP sessions and may get removed by the agent.  Workaround: Disable direct RDP block feature temporarily."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 25118",
+        "completion": "Session host installation may not show any errors if the user running the setup does not have appropriate rights to add or update registries. This may result into functional failure at a later stage during the setup.  Recommendation: Session host installation logs should be verified post installation."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 24995",
+        "completion": "Some exceptions are logged in session host logs, when a session host with multiple running sessions (with VIP enabled) is restarted.  Exception: The underlying provider may fail on Open."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 24888",
+        "completion": "An error is logged in session host logs only after  a shared hosted desktop pool is provisioned.  Error: region LastServiceForcedExit failed. Error: The media is write protected."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 23964",
+        "completion": "Successful VIP removal log is not getting logged on controller, when session is logged out from within the session (SHD)."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 23408",
+        "completion": "Users fail to read the notification as Tray agent is getting opened in background in case of remote app session recording."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 23297",
+        "completion": "Controller does not support upgrade of session host servers that have sessions running. Due to which such servers have to be manually accessed and upgraded."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 22590",
+        "completion": "Windows server 2022 by default does not support multiple sessions of a single user. This can adversely affect virtual app delivery in shell mode.  Solution: Configure following group policy on server 2022: - Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections.  - Set Restrict Remote Desktop Services user to a single Remote Desktop Services session to Disabled."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 22519",
+        "completion": "Recording does not stop for the applications that are configured for it even after closing the application or even the application is not in use.  Same behaviour is observed for the configured network address."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 22170",
+        "completion": "On removing the remote app sessions from controller, provider session is going into disconnected state.  Workaround: Configure the group policy to logout the remote app sessions immediately:  gpedit.msc > Computer configuration > Administrative template > Windows components > Remote desktop services > Remote desktop session host > Session Time limits > Set time limit for logoff of Remote app session."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 21254",
+        "completion": "Logs are not created on HyWorks controller when local users are not created by session host server."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 20938",
+        "completion": "Session recording may not start if recording is configured to be started on specific process launch and the process is initiated within 10 seconds of session start."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 20725",
+        "completion": "Mozilla firefox and Microsoft Internet Explorer does not work correctly when initiated in a different user's context i.e. opened as a different user. This should be avoided."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 19910",
+        "completion": "In a very rare case, monitoring service database is having some garbage values and because of that the service is not responding.  The database should be replaced with empty database and monitoring service should be restarted to solve the issue."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 18860",
+        "completion": "Session recording not working when SMB2 based network is accessed."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 16949",
+        "completion": "Powershell upgrade to v3.1 is must for Windows 2008R2-SP1 for trust relationship repair."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 16941",
+        "completion": "Messages shown to user via virtual channels are outside of remote session and thus user may find it difficult to associate it with sessions, especially when running multiple virtual apps in shell mode."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 16929",
+        "completion": "Capacity plan will continue to affect  managed session team even when:  1. Plan is inactive 2. Session team in removed from capacity plan. 3. Schedule has expired. 4. Capacity plan is changed from enforce to disabled."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery -",
+        "completion": "Chrome browser does not get launched in multiple remote sessions of a single user on Windows session host server.  Workaround: As many deployment need to access chrome as virtual app in shell mode, which will require multiple sessions of a single users from single session host server, specifying following command line will enable accessing chrome in shell mode multiple times:  Additional Command-line: --user-data-dir=%localappdata%\\Google\\Chrome\\%sessionname%"
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 14208",
+        "completion": "After upgrade or fresh installation of session host server, on first logon to server, couple of powershell windows will be shown for sometime."
+    },
+    {
+        "prompt": "Limitations and Issues in SHD and App Delivery 13922",
+        "completion": "RDS role is bot available on Windows 2019 essentials and thus can not be used for virtual application or shared hosted desktop delivery."
+    }
+]

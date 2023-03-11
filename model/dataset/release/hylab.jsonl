@@ -1,0 +1,254 @@
+[
+    {
+        "prompt": "Limitations and Issues of HyLabs 27266",
+        "completion": "HyLabs(HyLite) is not supported with authentication domain having following configurations: authentication server - built-in, authorization server - built-in and user credentials for remote server - User provided credentials.  AD/LDAP based authentication configurations should be used."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 14403",
+        "completion": "Reservation Redeployment is getting stuck when snapshot setting is changed."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 13393",
+        "completion": "Daily reservation is shown to run after one month after editing (4 schedules are there with daily recurrence even past dates). Workaround: Update the schedules again."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 12973",
+        "completion": "Incorrect log is displayed for fix course self-study operation of powered off reserved VMs."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 12970",
+        "completion": "Self-study - Events that are not required to be logged are also logged."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 12884",
+        "completion": "No conflict occurs if Self-study is created simultaneously by the participant and admin."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10916",
+        "completion": "With \u00e2\u0080\u0098Reuse VMs..\u00e2\u0080\u009d disabled in reservation, course self-studies scheduled near to course reservation end-time may fail. Recommendation: Create self-studies after some time of course reservation end so that course reservation can be ended."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10891",
+        "completion": "CSV import fails for Unicode file format.  Workaround: Use other supported formats like UTF-8, Shift-JIS etc."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10881",
+        "completion": "Machine keys in IIS configuration for HyWorks web application resets on upgrade and login from HyLite results in error page 'Server Error in '/' Application.' => Error occurred during a cryptographic operation. Workaround: HyWorks Management Console web application Machine keys should be backed-up before upgrade and should be restored after the upgrade."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10879",
+        "completion": "Schedule code accepts special character ` and Code validation error occurs if administrator continues to schedule reservation with provided code. Recommendation: The mentioned special character should not be used."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10877",
+        "completion": "No warning or information of associated course self-study is shown while redeploying course reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10874",
+        "completion": "Course reservation with higher limits can be created if gold master is modified to reduce the previous allowed set limit.  Recommendation: Delete and recreate the Gold Master instead of modifying the existing one."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10868",
+        "completion": "Audit announcement is shown to the users, even when inactive Workaround: Delete audit announcement if not needed."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10806",
+        "completion": "Running reservation time can change after editing and re importing CSV. Recommendation: Do not update running reservations using CSV."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10794",
+        "completion": "Unable to import users when realm name is mentioned in CSV."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10771",
+        "completion": "Users not part of any course will not be able to access self-study reservations made by reservation admin for them.  Workaround: Create a dummy course for such users."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10757",
+        "completion": "Allow Connect option works only when preparation time is higher than the allow connect time. Reservations must be in running state for allow connect function to work."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10716",
+        "completion": "Pool creation types gets reset to 0 for RMS created desktop pools -> Leaves existing desktop pool, replica, resource pool as unmanaged. Recommendation: RMS desktop pools should not be altered from HyWorks Management Console."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10676",
+        "completion": "Course Self-Study reservation option should not be present in management for assistant user.  Recommendation: This is a duplicate option in HyLabs screen for assistant user. If needed, add reservation option itself can be disabled for assistant user from HyWorks Management Console."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10643",
+        "completion": "If RMS admin and the Participant creates Self-study for the conflicting time, Participant is unable to create more reservations.  Recommendation: Delete one of the self-study reservations for user."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10640",
+        "completion": "If RMS admin creates one self-study for participant, participant's count for \"Max Self-Studies Allowed\" remains intact. Recommendation: Self-study should be initiated by end-users only and thus administrators should not create self-study reservations for them."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10603",
+        "completion": "On deleting Reservation Pool manually, its resource pool does not get deleted from vCenter.   Recommendation: RMS desktop pools should not be altered from HyWorks Management Console."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10027",
+        "completion": "\"Number of connections exceeded\" error is displayed in the Schedule tab instead of Self-Study Reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 10026",
+        "completion": "CSV Import: Reservation is getting added, even when self-study enabled has duration set as 0.  Recommendation: Self-study duration should not be kept as 0 while being imported from CSV."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 9044",
+        "completion": "MMC and RMS service config details should be restored post upgrade.  Recommendation: Backup should be taken before upgrade for smooth and faster restoration of configurations."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 8854",
+        "completion": "Incorrect Japanese translation in Deployment options dialog. Recommendation: Use Chrome or Firefox for administration."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 8709",
+        "completion": "Course self-study is getting failed when \"Assign network ready desktops\" is enabled on Gold master.  Recommendation: Keep the flag as disabled in provisioning profiles."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 8648",
+        "completion": "Reservation should be highlighted using some mechanism if they have some recommended deployment options pending."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 8384",
+        "completion": "Admin, incharge can create self-study with same time as existing user self-study."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 8192",
+        "completion": "Calendar should show all reservation assigned to Participant/ Incharge / assistant."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7976",
+        "completion": "Audio and Mic cannot be controlled from HyWorks Controller Connection Profiles in session from HyLite.  Workaround: Additional Command Line Params can be used"
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7975",
+        "completion": "Course extension by admin are not reflected on calendar view and hence, course self-study can be created by admin in extended period of course reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7962",
+        "completion": "RMS logs-out user session though it has been disconnected from HyWorks Controller by admin."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7959",
+        "completion": "In some cases, immediately after system start DVM agent may not get updated as powered-on due to failure in connecting to AccopsMQ."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7943",
+        "completion": "Updating an existing schedule shows conflicts with expired schedule.  Workaround: Update schedule and change start date as today."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7880",
+        "completion": "On changing default reservation settings, changes are not reflected on running self-study reservation"
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7863",
+        "completion": "Are you sure you want to shut down the selected reservation? confirm action dialog box is not hidden and page is stuck."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7850",
+        "completion": "Mail comes on start event even when the reservation is failed."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7825",
+        "completion": "Importing .txt file via CSV Import results in Object reference error."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7814",
+        "completion": "Extension is allowed for course reservation schedules which results in conflicting of schedules of same reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7805",
+        "completion": "Reservation status is not updated as failed when creation of VMs failed during redeploy."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7803",
+        "completion": "Session change of connect is not updated if DVM Agent counters error like [#7802]."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7789",
+        "completion": "Timezone Issues: Reservation creation may not work correctly when users are working from different timezone as HyLabs portal displays current time of client machine whereas reservation scheduling uses server time for calculations."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7786",
+        "completion": "[Gap/ Limitation for Kyoto] While creating self-study reservation, extension of existing reservation is not considered, Participant is able to add reservation in conflicting schedule"
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7771",
+        "completion": "Refresh button is displayed for course default GM when only admin access flag is enabled"
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7693",
+        "completion": "Numbering by RMS is not getting used for newly created VMs after deleting the VMs from the reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7538",
+        "completion": "Session change event for lock and unlock are not generated thus, max concurrent connection count is un-managed with Desktop concurrent connection check option as 1."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7522",
+        "completion": "Agent status is not displayed for cloned VMs on reserved VMs wizard."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7518",
+        "completion": "GM Limits will not get applied on existing reservations schedules post upgrade from v3.2 to v3.3."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7503",
+        "completion": "Keeping End time of schedule1 and start time of schedule2 shows conflict e.g. two schedules (schedule1 ending at 5:30 and schedule2 starting at 5:30) cannot be created Workaround: Create schedule1 with end time as 5:29 or schedule2 with start date as 5:31."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7471",
+        "completion": "Deployment setting are not considered for all kinds of GM limits."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7445",
+        "completion": "Enter value less than 99999 validation message is not displayed for Max Active VMs field while adding gold master."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 7257",
+        "completion": "RMS: Incharge able to remove himself from the course."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 6336",
+        "completion": "Assistants can edit incharge list in reservation."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 6251",
+        "completion": "Disabling course self-study in course reservation settings after course self-study reservations creation, does not show any error and course self-studies are accessible."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 6090",
+        "completion": "[GAP] Object available through all applicable roles should be displayed for a user."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 5495",
+        "completion": "Sometimes even after logging out of RMS portal, the next logon with user having different role causes mix-up of roles and presents improper interface to user."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4872",
+        "completion": "[Kyoto] Reservation edit should show the redeploy settings as saved from Gold Master."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4840",
+        "completion": "Same CentOS and Ubuntu VDI gold master can be accessed by reservation admin, incharge, assistant."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4810",
+        "completion": "Computer account deletion from AD will get failed if provisioning profile has been modified to use different domain user account."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4226",
+        "completion": "Connect button gets enabled even when reserved VMs are still in configuring state."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4216",
+        "completion": "Multi-Schedule reservation is not displayed properly in received mails as per in E-mail Notification Settings."
+    },
+    {
+        "prompt": "Limitations and Issues of HyLabs 4101",
+        "completion": "Deleting participant from self-study reservation created by admin, will come into effect only in next schedule."
+    }
+]
