@@ -1,5 +1,4 @@
-from serve import app, socketio
+from serve import app
 
 if __name__ == '__main__':
-    socketio.run(app)
     app.run(debug=True)

@@ -15,11 +15,21 @@ while (keep):
     response = openai.Completion.create(
         model=model,
         prompt=prompt,
-        temperature=0.91,
+        temperature=0.5,
         top_p=1.0,
-        max_tokens=200,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
+        max_tokens=400,
+        frequency_penalty=0.5,
+        presence_penalty=0.5
     )
-    print("Ans: ", response.choices[0].text.strip())
+    para =response.choices[0].text.strip()
+    lines = para.splitlines()
+
+    # Remove duplicate lines using a set
+    unique_lines = set(lines)
+
+    # Join the unique lines back together into a single string
+    result = '\n'.join(unique_lines)
+
+    print()
+    print("Ans: ", result)
     print()
