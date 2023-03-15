@@ -1,0 +1,58 @@
+[
+    {
+        "prompt": "installation and upgrade issue 22548",
+        "completion": "[Controller Setup] HyWorks Controller sync (For modes with HyWorks managed database availability) will not work, if admin has installed controller with providing database address as localhost. HyWorks installer does not resolve the hostname, when only localhost is provided.  Recommendation: Database address should be provided in hostname\\SQL-instance-name or IP Address\\SQL-instance name format."
+    },
+    {
+        "prompt": "installation and upgrade issue 20149",
+        "completion": "[Controller Installer] On un-installation, HyWorks Controller setup leaves the inbound rules in firewall for 1. Accops HyWorks Reservation Management Service (port: 38868), 2. HyWorks License Server (Port: 38867), 3. HyWorks Monitoring Service (Port: 38870) 4. HyWorks Upgrade Service (Port# 38865) 5. HyWorks Management Console (Port# 443)  6. EDC Proxy Server (Port: 38861)"
+    },
+    {
+        "prompt": "installation and upgrade issue 15006",
+        "completion": "[Controller Setup] Controller installation with SQL 2008 is not supported."
+    },
+    {
+        "prompt": "installation and upgrade issue 18840",
+        "completion": "[SRMS Setup] On clicking on Next on Database selection page, it goes into Not-responding state for some time.  Recommendation: Wait for installer to check database configurations."
+    },
+    {
+        "prompt": "installation and upgrade issue 18289",
+        "completion": "[Controller Setup] Japanese Sync framework is not getting installed on Japanese Windows Server (Japanese Sync FW is not embedded in installer)  Workaround: Install Japanese Sync Framework separately."
+    },
+    {
+        "prompt": "installation and upgrade issue 18287",
+        "completion": "[Controller Setup] Upgrading broker node before Management nodes will result in setup corruption (v3.3-GA-HF4 Multi-node to latest)  Workaround: Restart broker node service after upgrade of all nodes."
+    },
+    {
+        "prompt": "installation and upgrade issue 18026",
+        "completion": "[Controller Setup] Restore database option is disabled when database is on some other VM. As controller will not be able to move backup file to SQL Server and thus restore is not supported for configurations having SQL Server is hosted on remote server and not on controller.  Backup can be restored using SQL management studio and then controller service can be started to used backed-up database."
+    },
+    {
+        "prompt": "installation and upgrade issue 18002",
+        "completion": "[Controller Setup] Broker node installation will not work if any of management node is not reachable.  Recommendation: Keep management nodes installed, up and reachable, during installation of broker nodes."
+    },
+    {
+        "prompt": "installation and upgrade issue 15701",
+        "completion": "[Controller Setup] Controller/SHD installer gets failed, if EDC.Core.dll file and installer setup are kept in the same folder.  Recommendation: Remove edc.core.dll file, if present in same directory where setup file is kept."
+    },
+    {
+        "prompt": "installation and upgrade issue 15213",
+        "completion": "On upgrading to v3.3-GA (12803), incorrect RDP port is configured in desktop pool configuration. Incorrect port - 3889; Correct port - 3389. Impact: The bug can cause connection failures to shared hosted desktops post upgrade."
+    },
+    {
+        "prompt": "installation and upgrade issue 14599",
+        "completion": "After upgrading to 3.3 GA, authentication server is not reachable. Impact: User login failures. HyWorks deployments having AD group as super-administrator, admin login will also fail and whole system may become unaccessible. Workaround: Change Active Directory option value to 2 or 3 in database - Table Name: ClusterServerSettingsDbo, Field Name: ADGroupAccess Type, Set Value: 2 or 3 RecommendedRepair HyWorks Controller after upgrade and set super-administrator as local HyWorks user. Login into Management console with new super admin, update Active directory options value to 3 from 6 in System - Advanced Config and save or update authentication server configurations to have base DN and other new mandatory fields."
+    },
+    {
+        "prompt": "installation and upgrade issue 13918",
+        "completion": "[Session Host Setup] No error logs are shown, when HyWorks Session Host setup fails to install remote desktop server role and thus administrator can not know, if installation is completed successfully or not."
+    },
+    {
+        "prompt": "installation and upgrade issue 13778",
+        "completion": "[Controller Setup] Residual empty License Service and Upgrade service folders are getting created on HyWorks Controller installation."
+    },
+    {
+        "prompt": "installation and upgrade issue 10107",
+        "completion": "[Controller Setup] On upgrade or repair, if we go forth and come back, features are getting checked automatically even if they were unchecked."
+    }
+]

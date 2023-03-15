@@ -2,7 +2,9 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
+
 url = 'https://docs.accops.com/HyWorks34/content/release_notes/hyworks_known_issues/hylabs_known_issues.html'
+
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 table = soup.find("table")
@@ -22,7 +24,6 @@ print(data_dict)
 json_data = []
 for key, value in data_dict.items():
     json_obj = {"prompt": "Limitations and Issues of HyLabs "+ str(key), "completion": value}
-    json_data.append(json_obj)
 
 with open('model/dataset/release/data.json', 'w') as f:
     json.dump(json_data, f, indent=4)
