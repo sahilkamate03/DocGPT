@@ -1,0 +1,498 @@
+[
+    {
+        "prompt": "HyWorks Controller Known Issues 26215",
+        "completion": "With deployment settings being kept as default, all the cloned VMs are getting cloned on a single host on which gold master is running, even when the gold master is in cluster.  Workaround: Make sure to specify deployment settings to be deployed at the cluster level."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 26042",
+        "completion": "All the cloned VMs are created on the same storage container as the gold master and not on the specified storage container at the time of cloning with Nutanix."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 25836",
+        "completion": "An incomplete and confusing error is logged in HyWork, when user's attempt to change password fails because of complexity requirements."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 25659",
+        "completion": "Even though User initiates the Power operations on VMs, the log is getting generated again system user in the Controller logs."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 25346",
+        "completion": "Controller continues to show old platform for logged in user and does not refreshes the platform information."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24997",
+        "completion": "Same users from different authentication server can be added, if configurations are changed in auth-domain, e.g. auth-domain configuration is changed from built-in/built-in to LDAP/built-in or vice versa. Impact: The duplicate entries may confuse administrator and also may result in login or authorization failures sometimes.Recommendations: The organization configurations should be planned well so that it does not require change. Even if it needed change, clean-up of HyWorks should be done to remove all users from previous auth-domain configurations."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24885",
+        "completion": "Oracle Data Disk and OS Disk snapshot is not getting deleted in set time and in case of recompose the old snapshot may be used for provisioning causing the changes done on Gold master to be ignored."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24678",
+        "completion": "Controller creates an error log if user refreshes the app list on client side and previously some virtual apps in remote app mode are opened and then closed. Error log: No App session found to reconnect for User 'Username'."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24527",
+        "completion": "In some rare cases VM deletion was failed with error \"The Object context instance has been disposed and can no longer be used for operations that require a connection\", while deleting the desktop pool.Workaround: Manually remove the VM from HyWorks and respective provider."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24380",
+        "completion": "Password change may fail with exception, if port 636 is not reachable from HyWorks Controller or appropriate certificate configurations are not done on active directory server and option 6 is used for active directory connection.Exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24373",
+        "completion": "HyWorks Controller does not log VM image creation on AWS. There is no impact of this but eventually can create some confusion as VM image deletion logs are generated after cloning is completed."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 24017",
+        "completion": "Power operations initiated by client may fail with a non-user friendly exception in multi-node cluster deployment  of HyWorks Controller and broker nodes are unable to reach to Microsoft Azure.Exception: Unable to perform 'Power-on' operation on the desktop [VM-name] for the user 'Username'. More info: Invalid Credentials."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 23805",
+        "completion": "Provisioned SHDs published as physical PCs are not responding without showing error displayed.The issue is because, all the physical VMs added with same IP address are going to have duplicate IP and in that case controller does not show agent status."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 23491",
+        "completion": "HyWorks may leave some residual data of organization during deletion and may cause complete management console to be inaccessible. Workaround: Remove the details of deleted organization from database."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 23463",
+        "completion": "Controller uses VM-name to unregister from domain for deployed VMs instead of computer name (Fails in all cases where computer name is different than VM name).  Workaround: Administrators should use same name for fields VM name (Deployment screen) and Computer name (On Customization screen)."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 23376",
+        "completion": "Cloning fails when Gold master is created from vSphere server instead of vCenter.  Workaround: Create Gold master VM from vCenter Server wizard."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 22148",
+        "completion": "Sometimes exception on HyWorks Controller is logged after service service restart for stopping scheduler service.Exception:  Cannot stop EDCSchedulerService service on computer '.'. -> System.ComponentModel.Win32Exception: The pipe has been ended."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21958",
+        "completion": "Client entry is not getting updated after updating DN for a user and so multiple client entries are created."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21829",
+        "completion": "By default for fresh controller installation, with active directory option# 6 for user authentication and authorization, built-in groups and nested groups do not work in HyWorks Controller.If required it can be changed from HyWorks Controller > Advance Settings."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21731",
+        "completion": "Controller does not create synchronization logs for a very long period of time when the secondary server with a very large number of records has been added to a controller."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21724",
+        "completion": "SQL transactions fails on the Controller, when too many devices (100K) are registered."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21287",
+        "completion": "With small timeouts on HyWorks (< 5 minutes), sessions taken from HyLite may get logged out abruptly though user is working.This happens because the default sync time between HyLite and Controller is 5 minutes. It is recommended to have timeouts more than 10 minutes, when delivering with HyLite."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 21044",
+        "completion": "Controller access via VIP does not work, if network adapter used for VIP configuration is having space in it.Workaround: Change network adapter name to have no spaces and same name on both controllers."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20866",
+        "completion": "Controller sets display name same as username while importing users from LDAP and does not use the actual display name configured on LDAP."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20800",
+        "completion": "On initiating sync session info action on inactive session provider, controller displays a success status but does not perform any sync operation. The behavior is also different, when performing the same operation on session team with inactive session provider where appropriate logs will be created."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20733",
+        "completion": "Active directory server fails to be added into HyWorks, having following policy enabled: Policy:  \"Domain controller: LDAP server signing requirements\" enabled and configured as \"Require signing\"Exception: Additional non-parsable characters are at the end of the string"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20616",
+        "completion": "With too many records for synchronization (more than 100000), cluster configuration fails and primary server may go into fault mode.Workaround: Create secondary server with backup of primary database and then add to HA, avoiding too much synchronization."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20296",
+        "completion": "Adding a deployed shared hosted desktop pool creates a team with same name as desktop pool name but updating the desktop pool name does not update the team name."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20202",
+        "completion": "Network Settings details are not integrated in CSV export from session teams page."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20129",
+        "completion": "Controller does not support DVM Tools - Lite upgrade.Provisioned SHDs shown in VMs page can be incorrectly upgraded to DVM tools instead of Lite, because of above issue and may cause functional issues."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20124",
+        "completion": "Reason of service not responding for Linux session host server is shown as \"Feature not available\" and may cause little confusion."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20119",
+        "completion": "If a Windows session host server configured in HyWorks is powered-off, it can create a confusing log.Log: The Session Provider 'provider name' is not reachable. More Info :Unable to connect to the Session Provider hosted at 'Not Available'. Reason: Unable to parse URI 'http://Not Available, Reason: Invalid URI: The hostname could not be parsed.."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 20009",
+        "completion": "In some cases, HyWorks may log an error while deleting desktop pool, though related objects are deleted successfully.Error: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19984",
+        "completion": "Configuring static IP address on Gold master may result in duplicate IPs in the network post provisioning."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19983",
+        "completion": "Controller may fail to delete a device having associated session and attempts to register into another organization. Ideally Controller should delete the associated sessions also."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19868",
+        "completion": "The shutdown operation on Linux VMs is kept on hold, if someone has logged-in to the VM from hypervisor console session."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19664",
+        "completion": "Controller lists all attached VIPs, while trying to change primary IP for the VM. Ideally VIPs should not be listed as they are not always attached to virtual machines."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19560",
+        "completion": "Saving a session team with a very long range of VIP may get stuck and cause high resource (memory/CPU) utilization by controller service.Workaround: Create some small network range and configure it on team."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19091",
+        "completion": "Controller by default uses the primary or first IP on the network interface added on Azure VM, though VM has multiple IP addresses configured on network interface. Option to choose primary IP will not work for Azure provider VMs."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 19038",
+        "completion": "If a permanent VIP is having issue, the user session will be rejected unless the issue is solved or a new VIP is assigned."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18830",
+        "completion": "Controller may intermittently show error  \"Error while getting device software information for EDCA00MAC000\", causing some confusion."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18507",
+        "completion": "With too many users connecting a time (more than 10 users per second)"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18327",
+        "completion": "Controller transactions with SQL may get failed with timeout exception if database diagram is created. Usually database diagram is created when user clicks on it and it checks with user to create it."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18078",
+        "completion": "In case of domain controllers are deployed in child-parent configuration and HyWorks is configured with child domain, it does not fetch groups or OUs from parent domain controller."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18015",
+        "completion": "Changes to management are not forbidden from session nodes, so if any deployment is having management console installed on session nodes, changes can be done from session nodes as well."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 18006",
+        "completion": "Controller displays a confusing error invalid username and password, when SAM Account Name is to be used for logon but truncate is off and user is using username@domain-name or domain-name/username to sign-in."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14404",
+        "completion": "If special characters %/\\\" are included in Gold Image (Source VM) name or snapshot name  for  vCenter, snapshot of replica is getting created every time after increasing the count of VM for Persistent  pool of type linked clone Avoid  using special characters in Gold Image (Source VM) name or snapshot name."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14376",
+        "completion": "Incorrect error message is displayed in Test connection of AD, when configured admin account is locked"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14375",
+        "completion": "If the user has changed password,  Auth domain  (AD/Built-in) and synchronization as Do not create/ Manual, connection to  dedicated desktop fails."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14305",
+        "completion": "[HA] Removal of controller from HA setup leave Tracking Table in DB."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14256",
+        "completion": "With  CredSSP enabled, sessions from Linux based endpoints will fail because of protocol negotiation.Workaround: Create  a separate connection profile for Linux based endpoints."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 14083",
+        "completion": "Deleting a node from HyWorks Controller active-active setup requires node to be destroyed before removal as on service start the node may again get added."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13923",
+        "completion": "Controller will fail to authenticate users, who are member of \"CNF\" group in AD.Exception: XML parsing: line 1, character 1744, illegal xml character.How is CNF group created: If an object is created on one domain controller and an object with the same name is created in the same container on another domain controller before replication occurs, it creates an object name conflict. Active Directory automatically changes the relative distinguished name of the object with the earlier timestamp to a unique name.Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727059(v=technet.10)?redirectedfrom=MSDN"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13889",
+        "completion": "Internal configuration is displayed in the error message when user is not able to connect to the AD server."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13767",
+        "completion": "Even when the single Monitor usage is set in the Endpoint, user is able to use multiple monitors."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13667",
+        "completion": "User's are not notified about the destruction of desktops they are working on."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13256",
+        "completion": "Enable DVM reset  option is not working for SHD desktop pool due to which snapshot is not created."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13189",
+        "completion": "User friendly logs are not displayed when controller tries to get the weight of SHD servers which is not in a reachable state."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12972",
+        "completion": "While performing power operation, internal configuration is displayed in the Controller logs. Due to this, Administrator may not understand which desktop is affected."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12971",
+        "completion": "Connect desktop logs are not user friendly."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12942",
+        "completion": "It is not possible to delete vCenter server with 6000 or more VMs."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12871",
+        "completion": "AD User is not able to log in to client with 256 character length password."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12792",
+        "completion": "Unpredictable behavior when Round robin load balancing is used with multiple teams."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12564",
+        "completion": "With UPN as logon attribute, following special characters do not work in username \u00e2\u0080\u009c|\\@\u00e2\u0080\u009d`"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12561",
+        "completion": "User, Group or OU with pipe | character is not supported in HyWorks so user logon fails"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12547",
+        "completion": "Fetching OU in entitlements fails if search string includes bracket ( ).    Workaround:  Search without bracket"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12539",
+        "completion": "If backslash() is included in username, user might have login issues while logging from client using UPN."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12518",
+        "completion": "Secondary controller hangs and is not able to sync if primary  controller is having a large amount of data (1L rows)."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12517",
+        "completion": "Authorization with built-in and nested AD group does  not work when Group retrieval type is set to 6   Workaround:  Add entitlement using groups created manually and specific groups only."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12458",
+        "completion": "Desktop provisioning continues even when enough  resources are not available on desktop provider (VMware, Nutanix, Azure,  Hyper-V)."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12439",
+        "completion": "Unable to delete the AD when reservations created  by AD user exists in RMS  Workaround:  Delete all the associated objects from database before removing AD."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12436",
+        "completion": "User friendly errors are not logged when cloning fails and Administrator has to check respective Hypervisor or cloud logs."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12434",
+        "completion": "In many cases, test connection failure may not give detailed exception and thus more analysis of controller/ AD server  is required."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12432",
+        "completion": "Controller fails to fetch OU details if  domain name provided in AD configuration is not same as NetBIOS name."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12406",
+        "completion": "Desktop status is shown incorrectly as Not synced instead of Missing if configured DVM is deleted from the session provider."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12403",
+        "completion": "Misleading status of desktop VM, when user initiates shutdown internally. HyWorks does not support stop with de-allocation and because power-off is equivalent to  stop with de-allocation, incorrect status is displayed."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12402",
+        "completion": "Status of Desktop agent is Not Responding, when multiple VMs with different IP addresses are present in HyWorks with same IP address."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12399",
+        "completion": "HyWorks Controller Logs : Username and APPS name  is not appearing in Log Details."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12384",
+        "completion": "Controller Installation on WVD: 1. IIS  installation externally (Class not registered) 2. MSMQ installation  externally ([RMSBackgroundWorker] while monitoring import events)."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12371",
+        "completion": "[Azure] Log message incorrectly states that recreation of Desktop VM is supported when it is possible to recreate Desktop VMs"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12341",
+        "completion": "Large deployments with 10000 users might fail due to application connection issues."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 13334",
+        "completion": "In User Details, primary AD server details are displayed even when user is authorized from the secondary server."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12328",
+        "completion": "AD server configuration fails with error \"The  specified forest does not exist or cannot be contacted.\"    Workaround:  Enable Skip attribute verification."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12319",
+        "completion": "Skip Login Attribute Verification settings is not retained after updating AD server   Workaround:  Check this configuration every time active directory configuration is updated."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12317",
+        "completion": "Session nodes logs provide misleading information when management nodes get switched ON."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 12187",
+        "completion": "Incorrect error message shown to user when user account has expired in AD and Group retrieval type is set as '3'"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11950",
+        "completion": "When the Controllers in HA cluster are configured with different ports than information about different ports is not visible on clientWorkaround:  Use same port for both the Controllers."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11884",
+        "completion": "Controller installation on other than  default port does not get updated in management console configuration.   Workaround:  Update Management console configuration file to point to modified ports."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11784",
+        "completion": "[Azure] FQDN of cloned VM not reflecting on  desktop VM page."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11780",
+        "completion": "On user session reconnection (re-login by  user), controller may give reconnect of disconnected RDS session with no app  running in some rare case, where user has closed the remote app before the  disconnection."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11635",
+        "completion": "Session host server resource data does not get updated in real time and thus with adaptive load balancing server score will be updated after 30 second duration and may cause session from same server for some time until score gets updated."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues -",
+        "completion": "Database gets deleted after session node is uninstalled. This happens because by default database is removed after uninstalling node.  Workaround: Uncheck Post installation database removal permission."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11349",
+        "completion": "External load balancers must use HyWorks health probe service to detect node health, using port reachability may cause failure in detection of node down due to reasons such as licensing or SQL connection issues."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11334",
+        "completion": "Current weighted round robin does not work in the expected manner and may end up giving more session than expected."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11330",
+        "completion": "HyWorks uses Least connection load mechanism to serve the session when multiple sessions are requested at the same time. Due to this it might happen that multiple sessions may get served by the same server."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 11263",
+        "completion": "Database gets deleted incorrectly if it is pointed at the time of installing new node and the installation fails.                        Workaround: Installation should be done using dummy database and node should be configured in the cluster post installation."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 10992",
+        "completion": "When LDAP server is configured over SSL, it takes time to authorize/authenticate as Controller tries to resolve additional hosts.    Workaround:  Add appropriate host entry to reduce host resolution interval."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 10575",
+        "completion": "Sometimes power off operation does not work  with Nutanix dedicated session provider."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 10327",
+        "completion": "Nutanix may keep old IP cache for some time and thus may result giving two IPs to HyWorks Controller causing issues.  Workaround: Configure controller to use appropriate IP filtering."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 9569",
+        "completion": "HyWorks may not fail to authorize from configuration  using AD for authentication and built-in for authorization but using UPN as  logon attribute."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 9519",
+        "completion": "HyWorks sends logs to Accops Reporting Server or Syslog only once. Due to this, if it fails to send logs, these logs are lost and reports does not show data points of that duration."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 9493",
+        "completion": "HyWorks database restore fails if the parameters - Username, password, SQL server version, location; configured in the new SQL server and the one which is to be restored are same."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 8555",
+        "completion": "HyWorks may not work correctly with proxy authentication server e.g. Accops directory server."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 8439",
+        "completion": "Shadow sessions are created using the connection profile of the actual user session. Due to this, it might happen that Shadow session may not have features it actually requires. E.g. In user session, connection bar is disabled but in shadow session it will be needed."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues None",
+        "completion": ""
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 7478",
+        "completion": "Power off, Reset or suspend events are not known to DVM agent and thus controller will not be notified immediately. Power status will be updated as per timeouts in HyWorks Controller."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 7466",
+        "completion": "DVM Push will not  work with SQL installed in Windows authentication mode only."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 7082",
+        "completion": "Virtual IP for HA script does not support Ethernet name with space."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 6380",
+        "completion": "Sometimes error log 'Object reference not set to  an instance of an object' are generated, while restarting session host  server."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 6330",
+        "completion": "Logs are not generated, when desktop is not  assigned to users if they are in maintenance mode on desktop pool."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 6114",
+        "completion": "HyWorks Controller requires restart to refresh  time zone details."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 6101",
+        "completion": "Unable to delete organization though all visible  objects in organizations are deleted. Workaround: Before deleting organization, remove all the table references mentioned in logs."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5729",
+        "completion": "In some cases, HyWorks Controller installer is unable to detect correct OS type & previous installation of controller."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5698",
+        "completion": "Sometimes, select checkpoint in desktop pool wizard does not work in single click and may require reselection."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5681",
+        "completion": "With large deployments Hyper-V connector may stop responding and  communication issues may occur due to timeouts or SSL errors."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5375",
+        "completion": "No desktop VM's are seen in Desktop VM tab of  management console with zoomed in browser settings."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5279",
+        "completion": "Unable to authorize using built-in group Domain Users, when  controller is not in same domain as configured AD (Both as authentication and  authorization server)."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5278",
+        "completion": "In Desktop pools - OU with special  character is shown with garbage characters and after saving changes to  \"on\" string"
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5273",
+        "completion": "HyWorks Controller does not support provisioning using templates with  vCenter Server dedicated session provider."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5171",
+        "completion": "Pervious entitlements with authorization AD can login into client when authorization is changed to built-in when removal of entitlements."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5105",
+        "completion": "Some threads continue to connect to dedicated session provider though it\u00e2\u0080\u0099s made inactive."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5083",
+        "completion": "Updated AD group membership change is not getting fetched and thus  failing to assign the desktops/apps runtime. Workaround: Use advanced settings to use  alternate methods of fetching groups."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 5026",
+        "completion": "Desktop pools and reservations become accessible  once associated client groups are deleted."
+    },
+    {
+        "prompt": "HyWorks Controller Known Issues 4840",
+        "completion": "Gold master concurrent access is not restricted,  and hence multiple users can access desktops which supports multi-user  sessions e.g. Linux desktops."
+    }
+]

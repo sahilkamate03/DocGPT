@@ -1,0 +1,166 @@
+[
+    {
+        "prompt": "Limitations and Issues of Linux VDI 27265",
+        "completion": "App Delivery: Linux  session host server supports application delivery only in Shell mode.   Recommendations:  Though connection profile -> Access mode is overridden, and shell  mode is always used, but in any case if issue occurs and RemoteApp is set as access  mode, it should be changed to Shell mode."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 27264",
+        "completion": "App Delivery: Only a single session per user per server is supported.Recommendation:  Publish only single  application or only shared hosted desktop pool from on Linux session host  server. Both applications and shared hosted desktop or multiple applications  should not be published."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 26270",
+        "completion": "Warning is not displayed when Linux packages are being installed on unsupported versions.  Check supported Linux flavors and versions for for HyWorks."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 26088",
+        "completion": "HyShell is not working with latest assistive packages (v22022022) on Linux SHD v17.3 with VIP feature enabled."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 25997",
+        "completion": "Multiple packages are not installing on CentOS-v7.8.2003 and there are no error logsfor the same in the package installation logs. Current or latest assistive package (v06062022) can not be used for CentOS-v7.8.2003 delivery. #25995: HyPrint is not working on CentOS with latest assistive packages (v06062022)."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 24768",
+        "completion": "The newly provided customization option \"to make deployed VM member of AD group\" does not work for Linux based VMs and is applicable only for Windows based VMs."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 24742",
+        "completion": "Linux based VMs show old display name though updated on HyWorks Controller, as controller does not send updated display name of the user in subsequent calls."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 24718",
+        "completion": "Session disconnection logs sent to syslog or ARS do not have PIDs and so it is not possible to associate it with the specific session."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 24572",
+        "completion": "Linux based DVM tools does not support automatic repair or replace of corrupted local database. Administrator has to replace the database to resolve the issue."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 23944",
+        "completion": "HyShell is not supported on any vanilla Xubuntu OSes i.e. v16/18/20."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 23335",
+        "completion": "Connection to the RHEL based desktop fails when dollar sign is the last character of the username."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 22763",
+        "completion": "Though Linux DVM agent is configured to send only Process monitoring logs to ARS/Syslog, it also incorrectly sends User session monitoring logs to ARS/Syslog."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21744",
+        "completion": "IP virtualization feature is not supported with xUbuntu 16.04 or Accops SHD v1.7.3 and may cause system failures."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21729",
+        "completion": "After installing assistive packages on BOSS VM, built-in USB redirection service remains in disabled state by default.  Additional steps to be performed in BOSS for enabling services:  - Run script in assistive package \"boss_os_run_after_reboot.sh\""
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21608",
+        "completion": "Power options are not visible for admin user in Linux SHD who is not part of \"tsusers\" group.Workaround: Use commands to perform power operations."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21521",
+        "completion": "In Hyprep, at the time of joining the domain if just the Alternate DNS is configured or when both DNS are kept empty, Agent log displays AD DNS bad packet error and it is not possible to join the domain."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21420",
+        "completion": "On Xubuntu 18.4.1, Lock screen option is not working inside desktop session."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 21399",
+        "completion": "IP address of BOSS VM is not getting reported on Hyper-V and thus delivery of BOSS OS based Linux desktops is not be possible from Hyper-V or SCVMM."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 20476",
+        "completion": "On removing the app session from the Controller, session does not get terminated and Object ref is printed in desktop agent logs. The issue is observed intermittently on Xubuntu 16."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 20057",
+        "completion": "App/desktop session status is not getting updated on Controller and session host, when session gets disconnected because of network disconnection of SHD; even after SHD's network gets restored"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 20012",
+        "completion": "If the application session exists on controller even after the user has logged out of the application session and agent is down, user has to re-login to HyWorks."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 19876",
+        "completion": "Instead of logging off, sessions are disconnected when 'Force user logoff' is configured in session team of non-persistent session host servers."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 19583",
+        "completion": "HyPrep in Linux by default removes the network and recreates it and gets IP from DHCP, which means even if a deployment uses static IP of Gold master, it may get preserved on the cloned VMs post provisioning and customization in Accops."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 18804",
+        "completion": "Domain joining GUI script is not working for Xubuntu 20.4.3 Non-HWE kernel (VM created from uploaded VHD)."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 17091",
+        "completion": "Additional limitations of Power management for Managed Linux SHD pool:1. No notification is displayed to the user, when servers are cordoned or shutdown.2. User will not be able to save the work before shutdown and results in data loss."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14576",
+        "completion": "Lag is observed while streaming video on Linux VDI compared to Windows Remote Desktops."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14567",
+        "completion": "When Proxy is enabled while installing DVM Tools assistive package, few packages are not getting installed.Workaround: Provide direct internet access on VM where package needs to be installed."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14508",
+        "completion": "Intermittently built-in USB redirection driver goes into unreachable state resulting in USB redirection failure on Linux Virtual desktops when user logs in and logs out multiple times from VDI.Workaround: Reboot Linux Virtual Desktop"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14417",
+        "completion": "Intermittently error is logged in Desktop agent  log of Linux SHD, while calling API..' log logged in."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14406",
+        "completion": "Centos 7.5 Linux  VDI upgrade failed from version 04102018 to latest 20201110 version(offline  package).   CentOS 7.8.2003 is supported, thus upgrade of OS is expected."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14402",
+        "completion": "Controller settings in Database is not getting  updated in case of upgrading latest  DVM Tools (Via offline package)on Linux SHD v1.6Workaround:  Delete old database file and restart edcdvm service"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14372",
+        "completion": "[LDAP] : Colon sign is not working with LDAP user."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14367",
+        "completion": "[LDAP] * Asterisk character is not supported in  username (mid and last position)."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14366",
+        "completion": "[LDAP] User sync is failing when username starts '!'."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14343",
+        "completion": "[workgroup] Display name is not getting updated  in SHD for Linux SHD desktop session."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14325",
+        "completion": "[Workgroup]Application  shortcut is not getting created on desktop if user having $ and ` character in username."
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14309",
+        "completion": "GUI script to configure Active Directory in Linux  VDI gives incorrect error. Message display 'The computer is not joined to  domain'"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14227",
+        "completion": "Session ID is not  getting when user launches Linux SHD/app with AD user [SHD v 1.7.1] with  connection mode set as Remote App"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 14185",
+        "completion": "Upgrade from Linux DVM tools v3.3.1.12 and older  version is not supported, and pools should be redeployed after upgrading Gold  master with latest offline packages"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 12756",
+        "completion": "In USB network gate  previous USB device entries are not getting removed, Creating confusion for  end user"
+    },
+    {
+        "prompt": "Limitations and Issues of Linux VDI 12532",
+        "completion": "Caps lock is not working correctly on reconnect with  HyLite. More options to be evaluated for the same."
+    }
+]

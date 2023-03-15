@@ -1,0 +1,90 @@
+[
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 23613",
+        "completion": "Controller is unable to process, Hyper-V VMs having special character sequence \"<?\" or \"[]\" in the name. An example of process failure can be unable to get IP address."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 15298",
+        "completion": "Hyper-V or SCVMM (Hyper-V connector) may intermittently go into unreachable state, without providing relevant logs on HyWorks Controller. Sometimes timeouts are observed."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 15249",
+        "completion": "While deleting a provisioned desktop pool from an inactive Hyper-V connector, the actual VMs from Hyper-V or SCVMM are not deleted and also the administrator is not warned."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14574",
+        "completion": "Operational failures may occur if parallel operations (Delete VMs and Provisioning) is initiated on Hyper-V 2012R2 or 2016.Recommendations: While working with Hyper-V, careful provisioning and operations should be done."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14501",
+        "completion": "Hyper-V 2012 - Cloning will fail with object reference error if source VM name is having following special characters: ` ~ ! $ % ^ & ( ) [ ] { } \\"
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14422",
+        "completion": "[Hyper-V Connector - SCVMM] Replica is not deleted during recompose when clone type changed from Linked Clone to Full CloneWorkaround: Cleanup of replica can be done manually.A separate controller patch can be availed. Kindly contact Accops Support team for the same."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14420",
+        "completion": "Linked clone or clone with Snapshot fails with SCVMM is gold image name is having more than 20 charactersWorkaround: Gold VM or Source VM name should be less than 18 characters.A separate controller patch can be availed. Kindly contact Accops Support team for the same."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14419",
+        "completion": "[Hyper-V/ SCVMM] Cloning failures due to special chars in Gold Image (Source VM) name or Snapshot name (Feature: Clone from Snapshot)Recommendations: Following special characters should not be used in Hyper-V or SCVMM source VM name or snapshot name.[For SCVMM] Chararacters not supported in - VM name: space,,?,:,<,>,/,|,\\,\",',{,}   Characterss not supported in Snapshot name: `,&,\\,\",'[For Hyper-V] Chars not supported in VM name: ,?,:,<,>,/,|,\\,\",',{,},[,]"
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14383",
+        "completion": "Sometimes cloning fails on Hyper-V with error: Creating the disk at location  failed. .Workaround: Reboot Hyper-V server."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14382",
+        "completion": "Installer cancellation fails with inappropriate error  when Hyper-V Connector setup is cancelled from Platform Configuration Window."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14381",
+        "completion": "Hyper-V connector installer proceeds with local system account even when credentials are given as administrator without domain name (Workaround: Provide credentials as hostname\\username)."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14380",
+        "completion": "Hyper-V connector installer takes time when setting credentials (not using Local System Account)."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14345",
+        "completion": "Hyper-V cloning will not happen parallelly , because we are taking lock in clone task keep as known."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14629",
+        "completion": "Clone from Snapshot fails with an error as Unable to acquire a 'Delete' lock on object  of type 'VirtualDVDDrive'."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14624",
+        "completion": "Sometimes SCVMM provider goes in Not Reachable state with error \"The connection to the VMM management server localhost was lost\". This happens due to heavy load on  SCVMM and is not able to accept test connections from the connector."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 14316",
+        "completion": "Installing Hyper-V connector with wrong platform (e.g. Selecting SCVMM while installing on Hyper-V) and configuring on controller results in  errors on the Controller."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 8953",
+        "completion": "Preserve MAC address on recompose feature is not supported with Hyper-V or SCVMM."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 6877",
+        "completion": "Direct upgrade of Hyper-V connector is not supported and requires un-installation of previous version Recommendation: Uninstall any previous version and install new version. Hyper-V connector does not keep any information and thus data will be not be lost on un-installation and re-installation. Take backup of custom configuration before un-installation."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 6874",
+        "completion": "Known Issues - Hyper-V/SCVMM"
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 6873",
+        "completion": "With Hyper-V 2016 VM, DNS name is always shown as hostname of Hyper-V server."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 5420",
+        "completion": "Cloning fails if communication with Hyper-V Connector (SCVMM) fails."
+    },
+    {
+        "prompt": "Limitations and Issues of Connectors or Session Providers 3294",
+        "completion": "Cloning fails on SCVMM 2016 due to task lock issue. Issue occurs whe Gold Image is modified from Hyper-V and local DVD drive is attached.Recommendation: Use gold master with no local DVD drive attached."
+    }
+]
