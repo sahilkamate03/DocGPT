@@ -20,4 +20,6 @@ The text generation process can be controlled using various parameters:
 - `frequency_penalty` and `presence_penalty` control the frequency of repetition of words and phrases in the generated text.
 
 ### Running the code
-To run the code, save it as a Python file with a `.py` extension and run it in a Python environment with the OpenAI package installed. Replace the `model` variable with the name of the GPT model you want to use and replace the `openai.api_key` with your own API key. When you run the code, it will prompt you for input and generate text based on your input.
+To run the code go to model folder and type python main.py. 
+Note : 
+Before running the program setup the .env in the same folder.
